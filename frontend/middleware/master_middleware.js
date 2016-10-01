@@ -1,7 +1,8 @@
-import { applyMiddleware } from 'redux';
+import { applyMiddleware, compose } from 'redux';
 
-const masterMiddleware = applyMiddleware(
-
+const masterMiddleware = compose(
+  applyMiddleware(),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
 );
 
 export default masterMiddleware;

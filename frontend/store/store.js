@@ -6,8 +6,7 @@ const configureStore = (preloadedState = {}) => (
   createStore(
     RootReducer,
     preloadedState,
-    masterMiddleware,
-    window.devToolsExtension && window.devToolsExtension()
+    masterMiddleware
   )
 );
 
